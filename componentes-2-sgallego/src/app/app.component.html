@@ -1,0 +1,42 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container w-50">
+  <h1 class="d-flex justify-content-center">Formulario de contacto</h1>
+  <form #formulario="ngForm">
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Nombre</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Nombre y Apellidos" id="nombre" name="nombre" ngModel>
+        <app-validacion [nombreValido] = "nombreValido"></app-validacion>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control"  placeholder="ejemplo@dominio.com" id="email" name="email" ngModel>
+        <app-validacion [emailValido] = "emailValido"></app-validacion>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="mensaje" name="mensaje" rows="3" ngModel></textarea>
+        <app-validacion [mensajeValido] = "mensajeValido"></app-validacion>
+    </div>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">2 + 3 = ?</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" placeholder="Respuesta"  id="validador" name="validador" ngModel>
+        <app-validacion [respuestaValido] = "respuestaValido"></app-validacion>
+        <button (click)="comprobar(formulario.value)" class="btn btn-primary mt-3">Enviar</button>
+      </div>
+    </div>
+    <div></div>
+  </form>
+</div>
