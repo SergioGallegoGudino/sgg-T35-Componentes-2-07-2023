@@ -5,3 +5,5 @@
 <p>{{mensajeValido}}</p>
 
 <p>{{respuestaValido}}</p>
+<!-- Comprobamos con ngIf si ha llegado información en la variable datos. En caso de que sea así mostrará los datos introducidos por el usuario -->
+<p *ngIf="datos" style="color: black;">{{datos.nombre}} - {{datos.email}} - {{datos.mensaje}}</p>

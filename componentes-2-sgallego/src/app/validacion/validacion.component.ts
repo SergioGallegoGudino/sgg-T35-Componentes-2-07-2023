@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./validacion.component.css']
 })
 export class ValidacionComponent {
+  // Llamamos a cada variable de validacion y al campo de datos
   @Input() nombreValido: string | undefined;
   @Input() emailValido: string | undefined;
   @Input() mensajeValido: string | undefined;
